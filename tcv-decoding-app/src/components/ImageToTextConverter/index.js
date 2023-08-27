@@ -51,7 +51,7 @@ const ImageToTextConverter = ({ wordsSetter }) => {
 
   const processFile = async () => {
     setLoading(true);
-    if (imageFile && imageFile.type === 'image/png') {
+    if (imageFile) {
       const imageUrl = URL.createObjectURL(imageFile);
       const { data: { text } } = await Tesseract.recognize(imageUrl, 'hin');
       setText(text);
@@ -74,7 +74,7 @@ const ImageToTextConverter = ({ wordsSetter }) => {
 
       <label htmlFor="file-upload">
         <input
-          accept="image/png"
+          accept="image/*"
           id="file-upload"
           type="file"
           onChange={handleFileUpload}
