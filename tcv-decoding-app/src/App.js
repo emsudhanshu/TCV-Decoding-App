@@ -1,26 +1,27 @@
 import { useState } from 'react';
 import './App.css';
+import Header from './components/Header';
 import ExcelGenerator from './components/ExcelGenerator';
-import WordDocumentUploader from './components/WordDocumentUploader';
+import ImageToTextConverter from './components/ImageToTextConverter';
+import {
+  Stack,
+} from '@mui/material';
+// import WordDocumentUploader from './components/WordDocumentUploader';
 
 function App() {
 
-  const [words,setWords] = useState([]);
-
-  const wordsSetter = (words)=>{
+  const [words, setWords] = useState([]);
+  const wordsSetter = (words) => {
     setWords(words)
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Welcome to TCV Decoding App
-        </p>
-      </header>
-      <WordDocumentUploader wordsSetter={wordsSetter}/>
-      <ExcelGenerator words={words}/>
-    </div>
+    <Stack px={5} py={2} justifyContent='center' className="App">
+        <Header />
+        {/* <WordDocumentUploader wordsSetter={wordsSetter}/> */}
+        <ImageToTextConverter wordsSetter={wordsSetter} />
+        <ExcelGenerator words={words} />
+    </Stack>
   );
 }
 
