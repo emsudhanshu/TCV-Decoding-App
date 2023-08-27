@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/TCV-Decoding-App/static/css/main.073c9b0a.css",
-    "main.js": "/TCV-Decoding-App/static/js/main.479e37a6.js",
+    "main.css": "/TCV-Decoding-App/static/css/main.97ae9ee9.css",
+    "main.js": "/TCV-Decoding-App/static/js/main.13596768.js",
     "static/js/787.f6dfb4e4.chunk.js": "/TCV-Decoding-App/static/js/787.f6dfb4e4.chunk.js",
     "index.html": "/TCV-Decoding-App/index.html",
-    "main.073c9b0a.css.map": "/TCV-Decoding-App/static/css/main.073c9b0a.css.map",
-    "main.479e37a6.js.map": "/TCV-Decoding-App/static/js/main.479e37a6.js.map",
+    "main.97ae9ee9.css.map": "/TCV-Decoding-App/static/css/main.97ae9ee9.css.map",
+    "main.13596768.js.map": "/TCV-Decoding-App/static/js/main.13596768.js.map",
     "787.f6dfb4e4.chunk.js.map": "/TCV-Decoding-App/static/js/787.f6dfb4e4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.479e37a6.js"
+    "static/css/main.97ae9ee9.css",
+    "static/js/main.13596768.js"
   ]
 }
