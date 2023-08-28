@@ -54,8 +54,14 @@ const ImageToTextConverter = ({ wordsSetter }) => {
     if (imageFile) {
       const imageUrl = URL.createObjectURL(imageFile);
       const { data: { text } } = await Tesseract.recognize(imageUrl, 'hin');
-      setText(text);
-      wordsSetter(text?.split(' '))
+
+      // replacing \n char with space
+      let finalText = text?.replace(/\n/g, ' ');
+      // reducing multiple continous spaces into one
+      finalText = finalText?.replace(/\s+/g, ' ')?.trim();
+
+      setText(finalText);
+      wordsSetter(finalText?.split(' '))
       URL.revokeObjectURL(imageUrl);
     }
     setLoading(false);
