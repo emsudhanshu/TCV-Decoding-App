@@ -15,18 +15,20 @@ const ExcelGenerator = ({ words }) => {
     const workbook = new ExcelJS.Workbook();
     const worksheet = workbook.addWorksheet('Sheet1');
 
-    const headerRow = worksheet.addRow(['Name', 'Value']);
+    const headerRow = worksheet.addRow(['Name', 'Value', 'Value Breakup']);
     headerRow.font = { bold: true };
 
     let tcsValues = [];
+    let valueBreakup = [];
 
     words?.forEach(word => {
-      tcsValues?.push(getTcvValueByWord(word));
+      valueBreakup?.push(getTcvValueByWord(word)?.valueBreakup);
+      tcsValues?.push(getTcvValueByWord(word)?.sum);
     })
 
     words?.forEach((word, index) => {
       console.log(word,tcsValues?.[index])
-      worksheet.addRow([word, tcsValues?.[index]]);
+      worksheet.addRow([word, tcsValues?.[index], valueBreakup?.[index]]);
     })
 
 
