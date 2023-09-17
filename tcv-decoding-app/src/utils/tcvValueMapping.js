@@ -65,7 +65,7 @@ const tcvValueMapping = {
     "म": 10,
 
     "य": 2,
-    "र": 3,
+    "र": 4,
     "ल": 6,
     "व": 8,
 
@@ -76,7 +76,8 @@ const tcvValueMapping = {
 
 
     "ं": 9,
-    "ँ": 10
+    "ँ": 10,
+    "ः": 13
 }
 
 export default tcvValueMapping;
