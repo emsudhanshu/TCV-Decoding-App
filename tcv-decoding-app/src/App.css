@@ -1,3 +1,10 @@
 * {
   font-family: monospace !important; 
 }
+
+/* @font-face {
+  font-family: 'krutidev';
+  src: url('./components/WordDocumentUploader/krutidev.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+} */

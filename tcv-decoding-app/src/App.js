@@ -2,11 +2,11 @@ import { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import ExcelGenerator from './components/ExcelGenerator';
-import ImageToTextConverter from './components/ImageToTextConverter';
+// import ImageToTextConverter from './components/ImageToTextConverter';
 import {
   Stack,
 } from '@mui/material';
-// import WordDocumentUploader from './components/WordDocumentUploader';
+import WordDocumentUploader from './components/WordDocumentUploader';
 
 function App() {
 
@@ -18,8 +18,8 @@ function App() {
   return (
     <Stack px={5} py={2} justifyContent='center' className="App">
         <Header />
-        {/* <WordDocumentUploader wordsSetter={wordsSetter}/> */}
-        <ImageToTextConverter wordsSetter={wordsSetter} />
+        <WordDocumentUploader words={words} wordsSetter={wordsSetter}/>
+        {/* <ImageToTextConverter wordsSetter={wordsSetter} /> */}
         <ExcelGenerator words={words} />
     </Stack>
   );

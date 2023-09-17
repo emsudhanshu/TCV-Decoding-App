@@ -25,11 +25,10 @@ const ExcelGenerator = ({ words }) => {
     })
 
     words?.forEach((word, index) => {
+      console.log(word,tcsValues?.[index])
       worksheet.addRow([word, tcsValues?.[index]]);
     })
 
-    // worksheet.addRow(['saptami', 'fis']);
-    // worksheet.addRow(['sudhanshu', 'fis']);
 
     const excelBlob = await workbook.xlsx.writeBuffer();
     saveAs(new Blob([excelBlob]), 'data.xlsx');
